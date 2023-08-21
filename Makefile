@@ -14,8 +14,18 @@ build-interfaces:
 build-pubsub:
 	colcon build --packages-select cpp_pubsub
 
-run-listener:
+run-pubsub-listener:
 	source install/setup.sh ; ros2 run cpp_pubsub listener
 
-run-talker:
+run-pubsub-talker:
 	source install/setup.sh ; ros2 run cpp_pubsub talker
+
+build-addint:
+	colcon build --packages-select cpp_addint
+
+run-addint-server:
+	source install/setup.sh ; ros2 run cpp_addint server
+
+run-addint-client:
+	source install/setup.sh ; ros2 run cpp_addint client
+
